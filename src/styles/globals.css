@@ -1,0 +1,20 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables Personalizadas */
+:root {
+  --font-geist-sans: 'Geist', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+}
+
+/* Estilos Generales */
+body {
+  margin: 0;
+  font-family: var(--font-geist-sans);
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+
