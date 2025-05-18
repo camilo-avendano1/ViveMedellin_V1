@@ -1,7 +1,4 @@
-/* src/styles/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Variables Personalizadas */
 :root {
@@ -16,5 +13,4 @@ body {
   background-color: #f8f9fa;
   color: #212529;
 }
-
 
