@@ -1,0 +1,85 @@
+# Forzar LF para todos los archivos de texto para evitar conflictos de fin de línea
+* text=auto eol=lf
+
+# Mantener los archivos binarios sin cambios 
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+
+# Forzar CRLF para archivos que necesitan compatibilidad en Windows
+*.bat eol=crlf
+*.cmd eol=crlf
+
+# Forzar LF para archivos de configuración y código
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.less text eol=lf
+*.graphql text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+*.lock text eol=lf
+*.toml text eol=lf
+*.sh text eol=lf
+
+# Archivos de configuración específicos de Next.js y Tailwind
+postcss.config.* text eol=lf
+tailwind.config.* text eol=lf
+next.config.* text eol=lf
+next-env.d.ts text eol=lf
+*.tsbuildinfo text eol=lf
+
+# Evitar conflictos en lockfiles
+package-lock.json text eol=lf
+pnpm-lock.yaml text eol=lf
+yarn.lock text eol=lf
+
+# Evitar conflictos en archivos de configuración de ESLint y Prettier
+.eslintrc.* text eol=lf
+.eslintignore text eol=lf
+.prettierrc.* text eol=lf
+.prettierignore text eol=lf
+
+# Evitar problemas en archivos de configuración de VSCode
+.vscode/settings.json text eol=lf
+.vscode/extensions.json text eol=lf
+.vscode/launch.json text eol=lf
+
+# Archivos de configuración de testing
+jest.config.* text eol=lf
+cypress.json text eol=lf
+cypress.env.json text eol=lf
+
+# Archivos de configuración de Storybook
+.storybook/*.js text eol=lf
+.storybook/*.ts text eol=lf
+
+# Archivos de configuración de Docker
+Dockerfile text eol=lf
+docker-compose.yml text eol=lf
+
+# Archivos de configuración de Vercel y Netlify
+.vercelignore text eol=lf
+.netlifyignore text eol=lf
+
+# Archivos de configuración para CI/CD
+.circleci/config.yml text eol=lf
+.github/workflows/*.yml text eol=lf
+.gitlab-ci.yml text eol=lf

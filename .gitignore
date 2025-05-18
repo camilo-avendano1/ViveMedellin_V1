@@ -1,55 +1,67 @@
-# Node.js dependencies
+# Node.js Dependencies
 /node_modules/
-/.pnp/
-/.pnp.js
+.pnp/
+.pnp.js
 
-# Next.js build outputs
+# Next.js Build Outputs
 /.next/
-/out/
-/.turbo/
-/dist/
-/build/
+.out/
+.turbo/
+.dist/
+.build/
 
-# Tailwind y PostCSS
-postcss.config.js
-tailwind.config.js
+# Tailwind CSS y PostCSS
+postcss.config.*
+tailwind.config.*
+*.css.map
 
 # Lockfiles
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# Environment variables
+# Environment Variables
 .env
 .env.*.local
 .env.local
+.env.development.local
+.env.production.local
+.env.test.local
 
-# IDE y editores de código
+# IDE y Editores de Código
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
 
-# Archivos temporales del sistema operativo
+# Archivos Temporales del Sistema Operativo
 .DS_Store
 Thumbs.db
 Desktop.ini
+Icon?
 
-# Archivos de configuración de TypeScript
+# Archivos de Configuración de TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-# Cache de Babel, SWC y Vite
+# Cache de Herramientas de Desarrollo
 .cache/
 .babelcache/
 .swc/
 .vite/
+.eslintcache/
+jest/
+.jest/
+coverage/
+history/
+.revisions/
 
-# Archivos de configuración personal
-.vscode/
+# Archivos de Configuración Personal
 *.env.*
+.vscode/
 
-# Archivos de imagen y fuentes
+# Archivos de Imágenes y Fuentes
 *.png
 *.jpg
 *.jpeg
@@ -63,78 +75,53 @@ next-env.d.ts
 *.otf
 *.eot
 
-# Caché de npm y pnpm
+# Caché de npm, pnpm y yarn
 .npm/
 .pnpm/
 .cache/
 *.log
 
-# Configuración de Git
-.gitattributes
-.gitignore
-.git/
-
-# Configuración de Vercel y Netlify
+# Configuración de Vercel, Netlify y Otros
 .vercel/
 .netlify/
 *.toml
 
 # ESLint y Prettier
-.eslintrc.js
+.eslintrc.*
+.prettierrc.*
 .eslintignore
-.prettierrc
 .prettierignore
 
-# Jest
-/jest.config.js
-/jest/
-/.jest/
-
-# Cypress
-/cypress/
-cypress.json
-cypress.env.json
-
-# Historial de versiones
-.history/
-.revisions/
-
 # Storybook
-/.storybook/
+.storybook/
 storybook-static/
 
 # Testing
 /coverage
+/playwright-report/
+*.spec.*
+*.test.*
 
-# Next.js
-/.next/
-/out/
+# Control de Archivos Temporales de Turbopack
+.turbo/
 
-# Producción
-/build
-
-# Misceláneos
-.DS_Store
-*.pem
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# TypeScript
-*.tsbuildinfo
-next-env.d.ts
-
-# Otros archivos generados
+# Otros Archivos Generados
 *.bak
 *.tmp
 *.log
 *.lock
 
-# Evitar duplicados de global.css
+# Evitar Duplicados de globals.css
 src/app/globals.css
 
-# Control de archivos temporales de Turbopack
-.turbo/
+# Archivos de Versionado
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*.tmp
+*.backup
+*.log
+*.lock
+*.diff
