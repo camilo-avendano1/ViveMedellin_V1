@@ -1,0 +1,41 @@
+name:Continuous-integration and Deployment
+on: 
+  push:
+    branches:
+      - main
+
+env:
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  vercel_ORG_ID: ${{ secrets.vercel_ORG_ID }}
+  vercel_PROJECT_ID: ${{ secrets.vercel_PROJECT_ID }}
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Install Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.x
+      - name: Checkout code
+        run: npm install
+      - name: Build
+        run: npm build
+  Deploy:
+    needs: Build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js 22.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 22.x
+      - name: Install Vercel CLI
+        run: npm global add vercel
+      - name: Pull Vercel Enviroment Variables
+        run: vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy to Vercel
+        run: vercel deploy --no-wait --token=${{ secrets.VERCEL_TOKEN }}
+        
