@@ -3,14 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
-
-export default function JoinGroup({ params }: PageProps) {
-  // Simulación de datos del grupo (esto se reemplazará con datos reales más adelante)
+export default function JoinGroup({
+  params,
+}: {
+  params: { id: string };
+}) {
   const groupDetails = {
     id: params.id,
     name: `Grupo ${params.id}`,
@@ -29,12 +26,10 @@ export default function JoinGroup({ params }: PageProps) {
           Miembros Actuales: {groupDetails.members}
         </p>
 
-        {/* Botón para unirse al grupo */}
         <button className="bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 mb-4">
           Unirse al Grupo
         </button>
 
-        {/* Enlace para regresar a los detalles del grupo */}
         <Link href={`/groups/${groupDetails.id}`} className="text-blue-600 underline">
           Volver a los Detalles del Grupo
         </Link>
